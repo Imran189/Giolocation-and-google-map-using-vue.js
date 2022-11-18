@@ -3,46 +3,34 @@ import mapViewVue from "./components/mapView.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-  </header>
-
-  <main>
-    <mapViewVue />
-  </main>
+  <div class="app">
+    <div class="container py-4">
+      <header>
+        <img
+          alt="Vue logo"
+          class="logo"
+          src="./assets/logo.svg"
+          width="100"
+          height="100"
+        />
+      </header>
+      <div class="row py-3">
+        <div class="col-6"><mapViewVue /></div>
+        <div class="col-6"><mapViewVue /></div>
+      </div>
+    </div>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style>
+body {
+  padding: 0;
+  margin: 0;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.app {
+  background-color: rgb(197, 231, 231);
+  color: rgb(15, 15, 15);
+  height: 100vh;
+  width: 100%;
 }
 </style>

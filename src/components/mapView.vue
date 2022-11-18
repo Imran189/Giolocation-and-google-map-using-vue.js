@@ -1,14 +1,28 @@
-<script setup>
-import { ref, reactive } from "vue";
+<script>
+export default {
+  data() {
+    return {
+      coordinates: {
+        lat: 0,
+        lng: 0,
+      },
+    };
+  },
 
-const coordinate = reactive({
-  lat: 0,
-  lag: 0,
-});
+  created() {
+    this.$getLocation()
+      .then((coordinates) => {
+        this.coordinates = coordinates;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
 <template>
   <div>
     <h1>Your coordinates:</h1>
-    <p>{{ coordinate.lat }} Latitude, {{ coordinate.lag }} Longitude</p>
+    <p>{{ coordinates.lat }} Latitude, {{ coordinates.lng }} Longitude</p>
   </div>
 </template>
