@@ -30,7 +30,7 @@ export default {
     <GoogleMap
       api-key="AIzaSyDUqAdgpKhUzV9eZmdTA5WSkg3N9z78WsI"
       style="width: 640px; height: 360px"
-      :center="coordinates  a"
+      :center="coordinates"
       :zoom="15"
     >
     </GoogleMap>
